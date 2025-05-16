@@ -17,7 +17,7 @@ jobs:
       - name: Build static files
         run: |
           mkdir -p dist
-          cp index.html main.js style.css dist/
+          cp TodoList/index.html TodoList/main.js TodoList/style.css dist/
           cp -r TodoList dist/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
