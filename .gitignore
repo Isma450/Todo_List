@@ -4,6 +4,16 @@
 .DS_Store
 Thumbs.db
 
+# Fichiers de configuration
+node_modules/
+package-lock.json
+yarn.lock
+.env
+*.log
+*.pid
+*.seed
+*.pid.lock
+
 # Fichiers d'éditeur
 .vscode/
 .idea/
