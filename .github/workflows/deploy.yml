@@ -10,18 +10,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: "20"
+
       - name: Build static files
         run: |
           mkdir -p dist
-          cp TodoList/index.html TodoList/main.js TodoList/style.css dist/
-          cp -r TodoList dist/
+          cp -r TodoList/* dist/
+
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          publish_branch: gh-pages
